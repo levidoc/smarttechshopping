@@ -1,0 +1,10 @@
+<div class="footer-category">
+    <div class="container">
+        <h2 class="footer-category-title">Menu Title</h2>
+
+        <div class="footer-category-box">
+            <h3 class="category-box-title">{$title}</h3>
+            {@category-link-source}
+        </div>
+    </div>
+</div>
