@@ -1,0 +1,11 @@
+{
+    "action": "container",
+    "tag": "div",
+    "class": "link",
+    "data-types": "string",
+    "data-inputs": [
+        "data-anchor",
+        "data-link"
+    ],
+    "structure": "<a href=\"{$data-link}\">{$data-anchor}<\/a>"
+}
