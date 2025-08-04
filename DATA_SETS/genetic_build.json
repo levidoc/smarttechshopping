@@ -1,0 +1,19 @@
+{
+    "SITE_NAME": "VARSITY MARKETPLACE",
+    "SITE_DESCRIPTION": "Your one-stop shop for everything you need! We offer a wide selection of groceries, snacks, drinks, and campus essentials, conveniently located online. Save time and shop local with fast checkout and friendly service. Find everything from textbooks to toiletries \u2013 your campus life just got easier!",
+    "SITE_ICON": "",
+    "BUILD_CODE": "c0diMDNvY2pWaDU1TDVuWEoyelowSGhxQUpVTHl0UG13aDhXeWdsVUFTT1FDcTJDWkt3TXlzY1BlZTJxYWRqdUkxNlZlbWRGc1pTcUE5enlDcTZudWx6aldVc3llZDF4MXRrZmRqWDJBdWs9",
+    "BUILD_VERSION": "VS--1.35",
+    "SEO_TAGS": false,
+    "COLOR_SCHEME": false,
+    "LANGUAGE": "ENG",
+    "CURRENCY": {
+        "CURRENCY_CODE": "ZAR",
+        "CURRENCY_SIGN": "R",
+        "CURRENCY_NAME": "South African rand"
+    },
+    "PROPRIETOR": false,
+    "THEME_PACK": "M\u0117lyna",
+    "LAST_COMPILED": "2025-02-26 11:01:15",
+    "ENCRYPTION_SIGNATURE": false
+}
