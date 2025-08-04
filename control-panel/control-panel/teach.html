@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Builder</title>
+    <style>
+        body { font-family: sans-serif; }
+        #editor { border: 1px solid #ccc; min-height: 200px; padding: 10px; }
+        .draggable {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px;
+            cursor: move;
+            display: inline-block; /* Prevents images from taking full width */
+        }
+        .draggable img { max-width: 100%; height: auto; } /* Makes images responsive */
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/content-editable-js@0.0.4/dist/content-editable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+</head>
+<body>
+
+<h1>Website Builder</h1>
+
+<div id="toolbox">
+    <h2>Elements</h2>
+    <div class="draggable" data-element="h2">Heading 2</div>
+    <div class="draggable" data-element="p">Paragraph</div>
+    <div class="draggable" data-element="img" data-src="https://via.placeholder.com/150">Image</div>
+    <div class="draggable" data-element="div">Div</div>
+</div>
+
+<div id="editor"></div>
+
+<script>
+    const editor = document.getElementById('editor');
+    new Sortable(editor, {
+        group: 'shared',
+        animation: 150
+    });
+
+
+    const toolbox = document.getElementById('toolbox');
+    new Sortable(toolbox, {
+        group: 'shared', // set both lists to same group
+        animation: 150
+    });
+
+    toolbox.addEventListener('dragstart', event => {
+        const elementType = event.target.dataset.element;
+        if (elementType) {
+            event.dataTransfer.setData('text/plain', elementType);
+        }
+    });
+
+    editor.addEventListener('dragover', event => {
+        event.preventDefault();
+    });
+
+    editor.addEventListener('drop', event => {
+        event.preventDefault();
+        const elementType = event.dataTransfer.getData('text/plain');
+
+        if (elementType) {
+            let newElement;
+            if (elementType === 'img') {
+                newElement = document.createElement('img');
+                newElement.src = event.target.dataset.src;
+                newElement.alt = "Image"; // Add alt text for accessibility
+            } else {
+                newElement = document.createElement(elementType);
+                newElement.textContent = "Edit this " + elementType.toUpperCase();
+                new ContentEditable(newElement); // Apply ContentEditable directly to text elements
+            }
+
+            newElement.classList.add('draggable');
+            editor.appendChild(newElement);
+        }
+    });
+</script>
+
+</body>
+</html>
