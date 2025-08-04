@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Website Repair Form</h1>
+        <form id="repairForm" action="repair.php">
+            <div id="return_state" style="display: none;" class="alert alert-info">
+                <strong>Info!</strong> Indicates a neutral informative change or action.
+            </div>
+
+            <!-- Username -->
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username">
+            </div>
+
+            <!-- Password -->
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+            </div>
+
+            <!-- License Key -->
+            <div class="form-group">
+                <label for="licenseKey">License Key:</label>
+                <input type="text" class="form-control" id="licenseKey" name="licenseKey" placeholder="Enter your license key">
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary">Repair Website</button>
+        </form>
+    </div>
+
+    <!-- Include Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Handle form submission
+            $('#repairForm').submit(function (event) {
+                // Prevent the default form submission
+                event.preventDefault();
+
+                // Get form data
+                var username = $('#username').val();
+                var password = $('#password').val();
+                var licenseKey = $('#licenseKey').val();
+
+                // Create an object to hold the form data
+                var formData = {
+                    username: username,
+                    password: password,
+                    licenseKey: licenseKey
+                };
+
+                // Send form data to the backend using AJAX
+                $.ajax({
+                    type: 'POST',
+                    url: 'repair.php', // Replace 'backend.php' with the actual backend page URL
+                    data: formData,
+                    success: function (response) {
+                        // Handle the response from the backend
+                        document.getElementById('return_state').style.display = "contents"; 
+                        document.getElementById('return_state').innerHTML = "<strong>Info</strong>"+response; 
+                        console.log(response);
+                        // Perform further actions based on the response
+                    },
+                    error: function (xhr, status, error) {
+                        // Handle AJAX error
+                        console.log(xhr.responseText);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
