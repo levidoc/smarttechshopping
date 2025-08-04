@@ -1,0 +1,6 @@
+{
+    "action": "text",
+    "tag": "h1",
+    "class": "hero-text",
+    "text": "Click To Change Text"
+}
