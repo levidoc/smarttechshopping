@@ -1,0 +1,12 @@
+<header class="element">
+    <div class="header_content container">
+        <logo class="element">[@img #({$data-alt}="Website Logo",{$data-src}="http://localhost/online-store.varsitymarket.package/control-panel/34cdc5ddd600874f7ac6a5b00361640a4e6bb31ab57ec28ef19ba759b07d6d7ddU1zYnhnMVNxOWpnNVNsWk9hYkt6Zk92YW02ai9ldmtpZFNGczFnd2VqcDBSejFkeWNrMmduUzlUdnAyMFU3SU5mdkpyY2I5MlBFY0RIenNVRW4wWmZ6OXdRNXJVUzBCcWd3SE5JVnhuN2s9/favicon.png")]</logo>
+        <nav class="element">
+            <div class="link"><a href="#">New Arrivals</a></div>
+            <div class="link">({$data-link}="#",{$data-anchor}="Shop")</div>
+            <div class="link">({$data-link}="#",{$data-anchor}="Blog")</div>
+            <div class="link">({$data-link}="#",{$data-anchor}="About")</div>
+            <div class="link">({$data-link}="#",{$data-anchor}="Cart(1)")</div>
+        </nav>
+    </div>
+</header>
