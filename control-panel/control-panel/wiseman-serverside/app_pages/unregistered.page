@@ -1,0 +1,34 @@
+<div class="main-header anim" style="--delay: 0s; text-align: center; padding:1rem 3rem;">Unregistered Blog</div>
+
+<div class="videos" style="grid-template-columns: repeat(2,1fr);">
+
+    <div class="video anim" style="--delay: .4s;background-image: url(https://img.freepik.com/free-vector/anxiety-concept-illustration_114360-8014.jpg?t=st=1735530140~exp=1735533740~hmac=d0d139f358eaa6d1f69ac6977ca39bfe51119f4e0e9408cc518a3e120a6955b8&amp;w=740);background-size: cover;filter: grayscale(1);min-height: 25rem;">
+        <div class="video-wrapper"></div> 
+    </div>
+
+    <div class="video anim" style="--delay: .4s">
+        <div class="video-wrapper"></div>
+        <div class="video-name">Blog Configuration Unregistered</div>
+        <div class="small-header anim" style="--delay: .3s; margin: 10px 18px; font-size: 2.5rem; font-weight: bolder;">Register To Continue</div>
+        <div class="video-view">This page has appeared because the system cannot detect your blog registration. If you did register your blog and your seeing this page, try reconfiguring your blog with your signature.</div>
+        <div class="video-name">Common Misconfigurations</div>
+        <div class="video-view">
+            Your blog may be misconfigured. Here are some common issues:
+            <br>
+            <br><span class="seperate video-seperate"></span> Default Admin Username: Using 'admin' as the username can make your blog vulnerable to attacks.
+            <br><span class="seperate video-seperate"></span> Weak Passwords: Ensure your passwords are strong and unique to prevent unauthorized access.
+            <br><span class="seperate video-seperate"></span> Open Comments: Unmoderated comments can lead to spam and malicious content.
+            <br><span class="seperate video-seperate"></span> Missing SSL Certificate: Not using HTTPS can compromise user data and SEO rankings.
+            <br><span class="seperate video-seperate"></span> Outdated Plugins/Themes: Keeping software up to date is essential for security.
+        </div>
+        <div class="button-wrapper" style="padding: 3rem 18px; filter: invert(1);">
+            <button class="like " onclick="change_page(`configuration`)">
+                Register Blog
+            </button>
+        </div>
+
+    </div>
+    
+    
+    
+</div>
