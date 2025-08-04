@@ -1,0 +1,23 @@
+<?php
+#Remove From Production 
+
+// Set the directory you want to serve
+$cur_dir = dirname(__FILE__)."/"; 
+
+// Change to the specified directory
+chdir($cur_dir);
+
+// Define the command to start the PHP built-in server
+$command = 'php -S 127.0.0.1:7000';
+
+// Open a log file to capture the output
+$hash = hash("sha256",date('d m Y')); 
+#$filename = $cur_dir."/records/session.log.".$hash.".report.pxy"; 
+#$logFile = fopen($filename, "w");
+
+// Start the server process and redirect output to the log file
+$process = popen($command, 'r');
+
+if (is_resource($process)) {
+}
+?>
