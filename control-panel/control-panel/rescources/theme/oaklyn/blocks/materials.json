@@ -1,0 +1,37 @@
+{
+  "footer": {
+    "start": "<footer>",
+    "end": "</footer>",
+    "blocks": [
+      {
+        "footer-bottom": {
+          "onedit": false,
+          "element": "footer-bottom-material.pack"
+        }
+      },
+      {
+        "footer-category": {
+          "onedit": false,
+          "element": "footer-bottom-material.pack",
+          "material": [
+            {
+              "{@category-link-source}": {
+                "file": "footer-category-link.material",
+                "input": {
+                  "{$link}": {
+                    "type": "string",
+                    "placeholder": "#"
+                  },
+                  "{$caption}": {
+                    "type": "string",
+                    "placeholder": "#"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
