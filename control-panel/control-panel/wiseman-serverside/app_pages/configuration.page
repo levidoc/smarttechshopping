@@ -1,0 +1,57 @@
+<div class="main-header anim" style="--delay: 0s; text-align: center;">Configure Blog</div>
+
+<div class="videos" style="grid-template-columns: repeat(2,1fr);">
+    <div class="video anim" style="--delay: .4s">
+        <div class="video-wrapper"></div>
+        <div class="video-name"><div class="small-header anim" style="--delay: .3s">Authenticate Website</div></div>
+
+        <div class="video-view" style="padding: 10px 20px 0px;">Username</div>
+        <div class="video-name">
+            <div class="search-bar">
+                <input type="text" placeholder="Username" id="edt_username">
+            </div>
+        </div>
+
+        <div class="video-view" style="padding: 10px 20px 0px;">Password</div>
+        <div class="video-name">
+            <div class="search-bar">
+                <input type="password" placeholder="Password" id="edt_password">
+            </div>
+        </div>
+
+        <div class="video-view" style="padding: 10px 20px 0px;">Server</div>
+        <div class="video-name">
+            <div class="search-bar">
+                <input type="text" id="edt_server" placeholder="(Optional)">
+            </div>
+        </div>
+
+        <div class="video-view" style="padding: 10px 20px 0px;">Server Authentication Code</div>
+        <div class="video-name">
+            <div class="search-bar">
+                <input type="text" id="edt_server_code" placeholder="(Optional)">
+            </div>
+        </div>
+
+        <div class="video-view" style="padding: 10px 20px 0px;">Email</div>
+        <div class="video-name">
+            <div class="search-bar">
+                <input type="text" id="edt_email" placeholder="Email">
+            </div>
+        </div>
+
+        <div class="video-view">**Use This Credentials To Access Your Control Panel**</div>
+    </div>
+
+    <div class="video anim" style="--delay: .4s;background-image: url(https://img.freepik.com/free-vector/stress-concept-illustration_114360-2031.jpg?ga=GA1.1.849532499.1735512699);background-size: cover;filter: grayscale(1);min-height: 25rem;">
+        <div class="video-wrapper"></div> 
+    </div>
+</div>
+
+<div class="button-wrapper" style="padding: 3rem 0px;">
+
+    <button class="like" onclick="authenticate_website()">
+        Authenticate Website
+    </button>
+
+</div>
